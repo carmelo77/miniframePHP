@@ -21,6 +21,66 @@ use App\Libraries\Database;
 
 			return $this->db->getAll();
 		}
+
+		public function store($data)
+		{
+			$sql = 'INSERT INTO students (name, age, id_section) VALUES (:name, :age, :id_section )';
+
+			$this->db->query($sql);
+
+			$this->db->bind(':name', $data['name']);
+			$this->db->bind(':age', $data['age']);
+			$this->db->bind(':id_section', $data['id_section']);
+
+			if($this->db->execute()) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+
+		public function edit($id)
+		{
+			$sql = 'SELECT * FROM students WHERE id = :id';
+			$this->db->query($sql);
+
+			$this->db->bind(':id', $id);
+			$row = $this->db->getOne();
+
+			return $row;
+		}
+
+		public function update($id, $data)
+		{
+			$sql = 'UPDATE students SET name = :name, age = :age, id_section = :id_section WHERE id = :id';
+			$this->db->query($sql);
+
+			$this->db->bind(':name', $data['name']);
+			$this->db->bind(':age', $data['age']);
+			$this->db->bind(':id_section', $data['id_section']);
+			$this->db->bind(':id', $id);
+
+			if($this->db->execute()) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+
+		public function destroy($id)
+		{
+			$sql = 'DELETE FROM students WHERE id = :id';
+			$this->db->query($sql);
+
+			$this->db->bind(':id', $id);
+
+			if($this->db->execute()) {
+				return true;
+			} else {
+				return false;
+			}
+
+		}
 	}
 
 ?>

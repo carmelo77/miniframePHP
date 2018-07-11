@@ -26,12 +26,12 @@
 						<td>".$s->age."</td>
 						<td>".$s->name_section."</td>
 						<td>
-							<a href='" . ROOT_URL ."/sections/edit/".$s->id."' >
+							<a href='" . ROOT_URL ."/students/edit/".$s->id."' >
 								Edit
 							</a>
 						</td>
 						<td>
-							<form action='" . ROOT_URL ."/sections/destroy/".$s->id."' method='POST'>
+							<form action='" . ROOT_URL ."/students/destroy/".$s->id."' method='POST'>
 								<input type='submit' value='Delete' />
 							</form>
 						</td>

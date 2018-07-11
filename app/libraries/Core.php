@@ -24,7 +24,8 @@ namespace App\Libraries;
 
 			}
 
-			//Si el controlador escrito no existe, buscamos y llamamos al default, que es Pages.
+			//En dado caso que controlador escrito no exista, automaticamente acude al que está default, que es Pages.
+			
 			require_once '../app/controllers/' . $this->controller . 'Controller.php';
 
 			$show = "\App\Controllers\\" . $this->controller . 'Controller';

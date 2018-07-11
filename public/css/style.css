@@ -1,0 +1,30 @@
+.container {
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+}
+
+label {
+	font-weight: 800;
+	float: left;
+}
+
+label::after {
+	 content: '\A'; white-space: pre;
+}
+
+.form-group {
+	padding: 5px 10px;
+}
+
+.form-group input[type="text"], input[type="number"] {
+	width: 80%;
+	padding: .375rem .75rem;
+	display: block;
+	font-size: 1rem;
+	color: #333;
+	line-height: 1.5;
+	border: 1px solid #ced4da;
+	border-radius: .25rem;
+	transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}

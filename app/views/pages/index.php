@@ -9,14 +9,6 @@
 </h1>
 
 <p>
-	<h3>
-		<?php
-			echo $data['lang']; 
-		?>
-	</h3>
-</p>
-
-<p>
 	<ul>
 		<?php
 			foreach ($data['articles'] as $key) {

@@ -7,3 +7,29 @@
 </head>
 <link rel="stylesheet" type="text/css" href="<?php echo ROOT_URL; ?>/css/style.css">
 <body>
+
+<p>
+	<ul>
+		<li>
+			<a href="<?php echo ROOT_URL; ?>/students/create">
+				Agregar Estudiantes
+			</a>
+		</li>
+		<li>
+			<a href="<?php echo ROOT_URL; ?>/students/">
+				Lista de Estudiantes
+			</a>
+		</li>
+		<li>
+			<a href="<?php echo ROOT_URL; ?>/sections/create"">
+				Agregar Secciones
+			</a>
+		</li>
+		<li>
+			<a href="<?php echo ROOT_URL; ?>/sections/"">
+				Lista de Secciones
+			</a>
+		</li>
+
+	</ul>
+</p>
